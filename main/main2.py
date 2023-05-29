@@ -7,8 +7,8 @@ import json
 
 # PTSD Suffered by Omega#2499
 # Creates pixels.json for the Array, grab the contents inside and head into the roblox file for more.
-current_dir = os.getcwd() + "\main"
-
+current_dir = os.getcwd()
+# Removed the additional directory added onto getcwd as it causes problems when the selected folder is main itself -Tuna
 
 # Load color image for colormap
 img_grab = os.path.join(current_dir, "image\cc.png")
@@ -74,7 +74,8 @@ json_string_with_newlines = json_string_with_newlines.replace('[[', '[\n[')
 json_string_with_newlines = json_string_with_newlines.replace(']]', ']\n]')
 
 # Write JSON string to a file
-with open('main/pixels.json', 'w') as json_file:
+with open('pixels.json', 'w') as json_file:
+# Same issue as before, removed \main as it caused problems. -Tuna
     json_file.write(json_string_with_newlines)
 
     
