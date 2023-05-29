@@ -191,4 +191,5 @@ for _, run in mergedStudMap do
 	part.Material = Enum.Material.Concrete
 end
 
-roblox.writePlaceFile("main/generatedMaps/GeneratedMap.rbxl", game)
+roblox.writePlaceFile("generatedMaps/GeneratedMap.rbxl", game)
+-- Same issue with Main2.py, where it tried to double connect to main because main was selected, so I removed main/ -Tuna
