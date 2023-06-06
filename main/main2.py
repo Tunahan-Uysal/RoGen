@@ -124,6 +124,7 @@ input_json = "pixels.json"
 script_path = os.path.join(current_dir, script_path)
 input_json = os.path.join(current_dir, input_json)
 
+# Run Powershell commands to start lune mapGeneration program
 subprocess.run([
     "lune",
     script_path,
