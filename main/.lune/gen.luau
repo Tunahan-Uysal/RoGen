@@ -123,7 +123,7 @@ local function round(v, bracket)
 	bracket = bracket or 1
 	return math.floor(v / bracket + math.sign(v) * 0.5) * bracket
 end
-
+--Not in use due to it ruining colors when generated -Tuna
 local function convertCompressedHex(hex)
 	local r = hex:sub(2, 3)
 	local g = hex:sub(4, 5)
