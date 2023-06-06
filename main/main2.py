@@ -7,6 +7,9 @@ import json
 
 # PTSD Suffered by Omega#2499
 # Creates pixels.json for the Array, grab the contents inside and head into the roblox file for more.
+
+# TRY THIS FIX: os.path.realpath(__file__)
+
 current_dir = os.getcwd()
 # Removed the additional directory added onto getcwd as it causes problems when the selected folder is main itself -Tuna
 
