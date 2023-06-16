@@ -3,23 +3,23 @@ import numpy as np
 from PIL import Image
 import os
 import subprocess
-import json
+import ujson
 
 # PTSD Suffered by Omega#2499
 # Creates pixels.json for the Array, grab the contents inside and head into the roblox file for more.
 
 # TRY THIS FIX: os.path.realpath(__file__)
 
-current_dir = os.path.dirname(os.path.realpath(__file__)) + "\\image\\"
+current_dir = os.path.dirname(os.path.realpath(__file__))
 # Made it get the path more reliably -Tuna
 
 # Load color image for colormap
-img_grab = os.path.join(current_dir, "image\cc.png")
+img_grab = os.path.join(current_dir, "image\\cc.png")
 
 img = Image.open(img_grab)
 
 # Load image and convert to grayscale for height
-darkness_img_grab = os.path.join(current_dir, "image\hh.png")
+darkness_img_grab = os.path.join(current_dir, "image\\hh.png")
 
 darkness_img = Image.open(darkness_img_grab).convert('L')
 
@@ -71,15 +71,15 @@ for y in range(height):
     darkness_rows.append(darkness_row)
 
 # Write pixel dictionary to JSON file
-json_string = json.dumps(pixel_dict)
+json_string = ujson.dumps(pixel_dict)
 json_string_with_newlines = json_string.replace('],', '],\n')
 json_string_with_newlines = json_string_with_newlines.replace('[[', '[\n[')
 json_string_with_newlines = json_string_with_newlines.replace(']]', ']\n]')
 
 # Write JSON string to a file
-with open('pixels.json', 'w') as json_file:
+with open('pixels.json', 'w') as ujson_file:
 # Same issue as before, removed \main as it caused problems. -Tuna
-    json_file.write(json_string_with_newlines)
+    ujson_file.write(json_string_with_newlines)
 
     
 # Create 2D array of darkness values
