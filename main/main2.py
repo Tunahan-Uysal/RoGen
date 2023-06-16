@@ -10,8 +10,8 @@ import json
 
 # TRY THIS FIX: os.path.realpath(__file__)
 
-current_dir = os.getcwd()
-# Removed the additional directory added onto getcwd as it causes problems when the selected folder is main itself -Tuna
+current_dir = os.path.dirname(os.path.realpath(__file__)) + "\\image\\"
+# Made it get the path more reliably -Tuna
 
 # Load color image for colormap
 img_grab = os.path.join(current_dir, "image\cc.png")
