@@ -14,12 +14,12 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 # Made it get the path more reliably -Tuna
 
 # Load color image for colormap
-img_grab = os.path.join(current_dir, "image\\cc.png")
+img_grab = os.path.join(current_dir, "image\\colorincluded.png")
 
 img = Image.open(img_grab)
 
 # Load image and convert to grayscale for height
-darkness_img_grab = os.path.join(current_dir, "image\\hh.png")
+darkness_img_grab = os.path.join(current_dir, "image\\heightincluded.png")
 
 darkness_img = Image.open(darkness_img_grab).convert('L')
 
@@ -59,16 +59,21 @@ for y in range(height):
         row_list.append({
             'd': pixel,
             'h': hex_color
+            
         })
+        
 
         # Add pixel darkness value to row list
         darkness_row.append(pixel)
+
+        
 
     # Add row data to main list
     pixel_dict.append(row_list)
 
     # Add row darkness values to main list
     darkness_rows.append(darkness_row)
+    print(len(darkness_rows))
 
 # Write pixel dictionary to JSON file
 json_string = ujson.dumps(pixel_dict)
@@ -77,7 +82,7 @@ json_string_with_newlines = json_string_with_newlines.replace('[[', '[\n[')
 json_string_with_newlines = json_string_with_newlines.replace(']]', ']\n]')
 
 # Write JSON string to a file
-with open('pixels.json', 'w') as ujson_file:
+with open(os.path.join(current_dir, 'pixels.json'), 'w') as ujson_file:
 # Same issue as before, removed \main as it caused problems. -Tuna
     ujson_file.write(json_string_with_newlines)
 
@@ -129,4 +134,5 @@ subprocess.run([
     "lune",
     script_path,
     input_json,
+    current_dir + "\\.lune\\generatedMaps\\MapGeneration.rbxl",
 ])
