@@ -9,7 +9,7 @@ BASIC GUIDE:
     Download a pre-built binary for your platform from Aftman's GitHub Releases Page [github.com](https://github.com/LPGhatguy/aftman).
     Install Aftman by running the following command in your terminal:
 
-`./aftman self-install`
+    `./aftman self-install`
 
 This will install Aftman to its own bin directory and update your system's PATH environment variable [github.com](https://github.com/LPGhatguy/aftman).
 Using Aftman to Download Lune
