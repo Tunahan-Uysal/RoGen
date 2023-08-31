@@ -63,5 +63,3 @@ Bu, **aftman.toml** dosyalarında listelenen tüm araçları geçerli dizininize
 2. Kurulum sırasında, Python'u PATH'e ekleyen kutuyu işaretlediğinizden emin olun. "Python 3.X'i YOL'a Ekle" gibi bir etikete sahip olmalıdır [github.com](https://github.com/PackeTsar/Install-Python)
 3. Python kurulduktan sonra, bir komut penceresi açabilmeli, **python** yazıp ENTER tuşuna basabilmeli ve bir Python komut isteminin açıldığını görebilmelisiniz. Çıkmak için **quit()** yazın. Ayrıca **pip** komutunu çalıştırabilmeli ve seçeneklerini görebilmelisiniz.
 4. Bunların ikisi de çalışırsa, [github.com](https://github.com/PackeTsar/Install-Python)https://github.com/PackeTsar/Install-Python adresine gitmeye hazırsınız demektir.
-
-Translated with www.DeepL.com/Translator (free version)
