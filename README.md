@@ -4,6 +4,8 @@ TO DO: Set up a Requirements.txt for Aftman to download
 
 ENGLISH GUIDE:
 
+---
+
 ## Setting Up Aftman
 
 Download a pre-built binary for your platform from Aftman's GitHub Releases Page [github.com](https://github.com/LPGhatguy/aftman).
@@ -31,6 +33,8 @@ This will install all tools listed in **aftman.toml** files based on your curren
 2. During installation, make sure to check the box that adds Python to PATH. It should be labeled something like "Add Python 3.X to PATH" [github.com](https://github.com/PackeTsar/Install-Python)
 3. Once Python is installed, you should be able to open a command window, type **python**, hit ENTER, and see a Python prompt opened. Type **quit()** to exit it. You should also be able to run the command **pip** and see its options.
 4. If both of these work, then you are ready to go [github.com](https://github.com/PackeTsar/Install-Python)https://github.com/PackeTsar/Install-Python.
+
+---
 
 TÜRKÇE REHBER: 
 
