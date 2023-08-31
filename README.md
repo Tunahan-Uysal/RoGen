@@ -32,7 +32,13 @@ This will install all tools listed in **aftman.toml** files based on your curren
 3. Once Python is installed, you should be able to open a command window, type **python**, hit ENTER, and see a Python prompt opened. Type **quit()** to exit it. You should also be able to run the command **pip** and see its options.
 4. After this, it is required to install the requirements.txt that is found within the folder
     pip install -r requirements.txt
-5. If both of these work, then you are ready to go and use RoGen.
+5. If both of these work, then you are ready to go and use RoGen, but first, you must install the extensions required.
+
+    pip install -r requirements.txt
+
+After install, you can edit the **main2.py* program to your needs and insert the required parameters to use it.
+
+    py main2.py
 
 ---
 
@@ -64,6 +70,10 @@ Bu, **aftman.toml** dosyalarında listelenen tüm araçları geçerli dizininize
 1. Python İndirmeler Sayfasından [github.com] (https://github.com/PackeTsar/Install-Python) en son Python3 yükleyicisini indirin ve yükleyin.
 2. Kurulum sırasında, Python'u PATH'e ekleyen kutuyu işaretlediğinizden emin olun. "Python 3.X'i YOL'a Ekle" gibi bir etikete sahip olmalıdır [github.com](https://github.com/PackeTsar/Install-Python)
 3. Python kurulduktan sonra, bir komut penceresi açabilmeli, **python** yazıp ENTER tuşuna basabilmeli ve bir Python komut isteminin açıldığını görebilmelisiniz. Çıkmak için **quit()** yazın. Ayrıca **pip** komutunu çalıştırabilmeli ve seçeneklerini görebilmelisiniz.
-4. Bundan sonra, içinde bulunan requirments.txt yüklenmesi gerekiyordur.
+4. Bunların ikisi de çalışırsa, Rogen kullanmaya hazırsınız demektir İlk önce gereken eklentileri yüklemeniz gerekir.
+
     pip install -r requirements.txt
-5. Bunların ikisi de çalışırsa, Rogen kullanmaya hazırsınız demektir.
+   
+Yüklendikten sonra, **main2.py**'ın içeriklerini değiştirerek bu aleti kullana bilirsiniz.
+
+    py main2.py
