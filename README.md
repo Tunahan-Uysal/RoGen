@@ -21,7 +21,7 @@ Now that Aftman is installed, you can use it to download Lune. Run the following
 
 This command adds Lune to an **aftman.toml** file in the current directory or creates one if it does not exist [lune-org.github.io.](https://lune-org.github.io/docs/getting-started/1-installation) Install the tool by running:
 
-    `aftman install`bash
+    aftman install`bash
     
 This will install all tools listed in **aftman.toml** files based on your current directory [fig.io.](https://fig.io/manual/aftman/install)
 
@@ -53,7 +53,7 @@ Artık Aftman kurulu olduğuna göre, Lune'u indirmek için onu kullanabilirsini
 
 Bu komut Lune'u geçerli dizindeki bir **aftman.toml** dosyasına ekler veya mevcut değilse bir tane oluşturur [lune-org.github.io.](https://lune-org.github.io/docs/getting-started/1-installation) Aracı çalıştırarak kurun:
 
-    `aftman install`bash
+    aftman install`bash
     
 Bu, **aftman.toml** dosyalarında listelenen tüm araçları geçerli dizininize göre yükleyecektir [fig.io.](https://fig.io/manual/aftman/install)
 
