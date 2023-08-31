@@ -6,20 +6,23 @@ BASIC GUIDE:
 
 ## Setting Up Aftman
 
-    Download a pre-built binary for your platform from Aftman's GitHub Releases Page [github.com](https://github.com/LPGhatguy/aftman).
-    Install Aftman by running the following command in your terminal:
+Download a pre-built binary for your platform from Aftman's GitHub Releases Page [github.com](https://github.com/LPGhatguy/aftman).
+Install Aftman by running the following command in your terminal:
 
-    `./aftman self-install`
+    ./aftman self-install
 
 This will install Aftman to its own bin directory and update your system's PATH environment variable [github.com](https://github.com/LPGhatguy/aftman).
-Using Aftman to Download Lune
 
-    Now that Aftman is installed, you can use it to download Lune. Run the following command in your terminal:
+## Using Aftman to Download Lune
 
-`aftman add filiptibell/lune`
+Now that Aftman is installed, you can use it to download Lune. Run the following command in your terminal:
+
+    aftman add filiptibell/lune
 
 This command adds Lune to an **aftman.toml** file in the current directory or creates one if it does not exist [lune-org.github.io.](https://lune-org.github.io/docs/getting-started/1-installation) Install the tool by running:
-`aftman install`bash
+
+    `aftman install`bash
+    
 This will install all tools listed in **aftman.toml** files based on your current directory [fig.io.](https://fig.io/manual/aftman/install)
 
 ## Installing a Stable Python Version
