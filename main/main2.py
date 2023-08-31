@@ -14,12 +14,12 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 # Made it get the path more reliably -Tuna
 
 # Load color image for colormap
-img_grab = os.path.join(current_dir, "image\\colorincluded.png")
+img_grab = os.path.join(current_dir, "image\\nw.png")
 
 img = Image.open(img_grab)
 
 # Load image and convert to grayscale for height
-darkness_img_grab = os.path.join(current_dir, "image\\heightincluded.png")
+darkness_img_grab = os.path.join(current_dir, "image\\nw.png")
 
 darkness_img = Image.open(darkness_img_grab).convert('L')
 

@@ -179,7 +179,7 @@ spawnPlate.CFrame = roblox.CFrame.new(529, 27.4, 221.2)
 for _, run in mergedStudMap do
 	local part = roblox.Instance.new("Part")
 	part.Color = convertCompressedHex(run.h)
-	local mappedHeight = round(map(run.d, 0, 255, 1, 50), 0.5)
+	local mappedHeight = round(map(run.d, 0, 255, 1, 25), 0.5)
 	local width = run.x2 - run.x1 + 1
 	local height = run.y2 - run.y1 + 1
 
