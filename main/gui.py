@@ -33,8 +33,8 @@ def resize_image(image_path, quant, quant_apply, max_size=(400, 400)):
     temp_file = "temp.png"
     img.save(temp_file)
     return temp_file
-def launchprogram(): 
-    subprocess.run(["python", current_dir + "/main2.py"])
+def launchprogram(heightLoc, colorLoc, colorB, heightB, height_onlyB, quantVar): 
+    subprocess.run(["python", current_dir + "/main2.py", str(heightLoc), str(colorLoc), str(colorB), str(heightB), str(height_onlyB), str(quantVar)])
 
 while True:
     event, values = window.read()
@@ -72,23 +72,27 @@ while True:
         height_image = values["-FILE1-"]
         if values["-FILE1-"] == "":
             sg.Popup('No Height Map Present', 'Please input a height map!')
-            failure_state = 100
+            failure_state += 100
         if height_or_color == '1':
             color_image = height_image
         else:
             color_image = values["-FILE2-"]
-            if values["-FILE2-"] == "":
+            if values["-FILE2-"] == "" and height_or_color == 0:
                 sg.Popup('No Color Map Present!', 'Please input a color map or use the program in height only mode!')
+                failure_state += 10
                 window.Element('-HEIGHTR-').update(value=True)
                 color_image = height_image
             
 
         
 
-        print(height_image, color_image, optimize_color, optimize_height, height_or_color)
+        print(height_image, color_image, optimize_color, optimize_height, height_or_color, values["-QUANT-"])
         if failure_state > 0:
             print("FAIL! Error Code:", failure_state)
-        #launchprogram()
+        else:
+            launchprogram(height_image, color_image, optimize_color, optimize_height, height_or_color, values["-QUANT-"])
+            sg.Popup('Success!', 'Succesfully created a new map.')
+        
 
     elif event in ["-FILE1-", "-FILE2-"]:
         image_path = values[event]

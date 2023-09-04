@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 import os
 import subprocess
+import sys
 import ujson
 
 # PTSD Suffered by Omega#2499
@@ -10,19 +11,40 @@ import ujson
 
 # TRY THIS FIX: os.path.realpath(__file__)
 
+# Data from GUI
+
+height_image = sys.argv[1]
+color_image = sys.argv[2]
+optimize_color = sys.argv[3]
+optimize_height = sys.argv[4]
+height_or_color = sys.argv[5]
+quant_value = sys.argv[6]
+
 current_dir = os.path.dirname(os.path.realpath(__file__))
 # Made it get the path more reliably -Tuna
 
-# Load color image for colormap
-img_grab = os.path.join(current_dir, "image\\nw.png")
 
-img = Image.open(img_grab)
 
 # Load image and convert to grayscale for height
-darkness_img_grab = os.path.join(current_dir, "image\\nw.png")
 
-darkness_img = Image.open(darkness_img_grab).convert('L')
+darkness_img = Image.open(height_image).convert('L')
 
+# Check if the images are optimized
+
+if optimize_height == True:
+    darkness_img = darkness_img.Quantize(int(quant_value))
+
+# Load color image for colormap, check if it uses Heightmap for it or not
+
+if (height_or_color == "1"):
+    img = darkness_img
+else:
+    img = Image.open(color_image)
+
+    # Check for color optimization
+
+    if optimize_color == True:
+        img = img.quantize(int(quant_value))
 # Get image dimensions
 width, height = img.size
 
@@ -38,8 +60,10 @@ for y in range(height):
     for x in range(width):
         pixel = darkness_img.getpixel((x, y))
         color_pixel = img.getpixel((x, y))
+        if img.mode == 'L':
+            color_pixel = (color_pixel, color_pixel, color_pixel)
         pixels[y][x][0] = pixel
-        pixels[y][x][1] = color_pixel[0]    
+        pixels[y][x][1] = color_pixel[0]
         pixels[y][x][2] = color_pixel[1]
         pixels[y][x][3] = color_pixel[2]
 
