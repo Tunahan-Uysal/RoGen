@@ -192,7 +192,7 @@ for _, run in mergedStudMap do
 end
 
 print(process.cwd)
-
-roblox.writePlaceFile(process.args[2], game)
+local placeFile = roblox.serializePlace(game)
+fs.writeFile(process.args[2], placeFile)
 -- Same issue with Main2.py, where it tried to double connect to main because main was selected, so I removed main/ -Tuna
 -- I hate this, why isnt there any getDir or getFile? I have to build my own Lune version... -Tuna

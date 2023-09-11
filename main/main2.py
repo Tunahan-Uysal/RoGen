@@ -155,7 +155,7 @@ input_json = os.path.join(current_dir, input_json)
 
 # Run Powershell commands to start lune mapGeneration program
 subprocess.run([
-    "lune",
+    current_dir + "\\.lune\\lune.exe",
     script_path,
     input_json,
     current_dir + "\\.lune\\generatedMaps\\MapGeneration.rbxl",
