@@ -21,9 +21,7 @@ layout = [
 ]
 
 window = sg.Window("RoGen GUI", layout)
-
-
-
+window.bind("<Return>", "pressEnter")
 
 def resize_image(image_path, quant, quant_apply, max_size=(400, 400)):
     img = Image.open(image_path)
@@ -64,7 +62,7 @@ while True:
         temp_file = resize_image(height_path, values["-QUANT-"], values["-HEIGHT1-"])
         window["-IMAGE1-"].update(filename=temp_file)
 
-    if event == "-PROG-":
+    if event in ("-PROG-", "pressEnter"):
         failure_state = 0
         optimize_color = values["-COLOR1-"]
         optimize_height = values["-HEIGHT1-"]
