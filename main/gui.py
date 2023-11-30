@@ -20,7 +20,7 @@ layout = [
     [sg.Submit(key="-PROG-"), sg.Save()]
 ]
 
-window = sg.Window("RoGen GUI", layout)
+window = sg.Window("RoGen GUI", layout, finalize=True)
 window.bind("<Return>", "pressEnter")
 
 def resize_image(image_path, quant, quant_apply, max_size=(400, 400)):
