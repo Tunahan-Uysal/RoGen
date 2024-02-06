@@ -79,7 +79,7 @@ local function mergeStudMap(unmergedMap)
 						or row[rowX].d ~= markedDepth
 						or row[rowX].h ~= markedColor
 						or wasHit(rowX, endingY + 1)
-						or startingY - (endingY + 1) < 2048
+						or startingY - (endingY + 1) => 2048
 					then
 						matchingRow = false
 						break
