@@ -5,7 +5,7 @@ local serde = require("@lune/serde")
 local roblox = require("@lune/roblox")
 local process = require("@lune/process")
 
-
+-- TODO: Fix the indentation, I dont know how I didnt see this earlier lol
 local function mergeStudMap(unmergedMap)
 	-- This is a list of chunks.
 	-- A chunk is defined with (x1, y1), (x2, y2), depth, and color.
@@ -123,13 +123,6 @@ local function round(v, bracket)
 	bracket = bracket or 1
 	return math.floor(v / bracket + math.sign(v) * 0.5) * bracket
 end
---Not in use due to it ruining colors when generated -Tuna
-local function convertCompressedHex(hex)
-	local r = hex:sub(2, 3)
-	local g = hex:sub(4, 5)
-	local b = hex:sub(6, 7)
-	return roblox.Color3.new(tonumber(r, 16) / 255, tonumber(g, 16) / 255, tonumber(b, 16) / 255)
-end
 
 local sourcePath = process.args[1]
 assert(sourcePath, "Missing singular argument, path to a json file.")
@@ -147,6 +140,7 @@ local Enum = roblox.Enum
 
 local scriptIns = roblox.Instance.new("Script")
 
+-- TODO: Can add in scripts from a seperate Lua file that we can Import
 scriptIns.Source = [[
 local Players = game:GetService("Players")
 
@@ -168,9 +162,9 @@ for _, player in ipairs(Players:GetPlayers()) do
     end
 end
 ]]
+
 scriptIns.Name = "Script"
 scriptIns.Parent = workspace
-
 local spawnPlate = roblox.Instance.new("SpawnLocation")
 spawnPlate.Name = "Spawn"
 spawnPlate.Parent = workspace
@@ -179,7 +173,7 @@ spawnPlate.CFrame = roblox.CFrame.new(529, 27.4, 221.2)
 for _, run in mergedStudMap do
 	local part = roblox.Instance.new("Part")
 	part.Color = convertCompressedHex(run.h)
-	local mappedHeight = round(map(run.d, 0, 255, 1, 25), 0.5)
+	local mappedHeight = round(map(run.d, 0, 255, 1, 25), 0.5) -- TODO: Create adjustable variables here to change the size of a stud, height of a stud, and the scale it works in
 	local width = run.x2 - run.x1 + 1
 	local height = run.y2 - run.y1 + 1
 
