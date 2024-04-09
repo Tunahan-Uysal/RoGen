@@ -79,7 +79,7 @@ local function mergeStudMap(unmergedMap)
 						or row[rowX].d ~= markedDepth
 						or row[rowX].h ~= markedColor
 						or wasHit(rowX, endingY + 1)
-						or startingY - (endingY + 1) => 2048
+						or startingY - (endingY + 1) >= 2048
 					then
 						matchingRow = false
 						break
@@ -122,6 +122,14 @@ end
 local function round(v, bracket)
 	bracket = bracket or 1
 	return math.floor(v / bracket + math.sign(v) * 0.5) * bracket
+end
+
+-- oops
+local function convertCompressedHex(hex)
+	local r = hex:sub(2, 3)
+	local g = hex:sub(4, 5)
+	local b = hex:sub(6, 7)
+	return roblox.Color3.new(tonumber(r, 16) / 255, tonumber(g, 16) / 255, tonumber(b, 16) / 255)
 end
 
 local sourcePath = process.args[1]
