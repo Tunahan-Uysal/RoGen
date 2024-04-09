@@ -160,14 +160,14 @@ input_json = os.path.join(current_dir, input_json)
 if usedOS == "Windows":
     subprocess.run([
         current_dir + "\\.lune\\lune.exe",
-        script_path + "\gen.luau",
+        script_path + "\gen.lua",
         input_json,
         current_dir + "\\.lune\\generatedMaps\\MapGeneration.rbxl",
     ])
 else:
     subprocess.run([
         current_dir + "/.lune/lune",
-        script_path + "/gen.luau",
+        script_path + "/gen.lua",
         input_json,
         current_dir + "/.lune/generatedMaps/MapGeneration.rbxl",
     ])
