@@ -4,6 +4,7 @@ from PIL import Image
 import os
 import subprocess
 import sys
+import platform
 import ujson
 
 # PTSD Suffered by Omega#2499
@@ -22,7 +23,7 @@ quant_value = sys.argv[6]
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 # Made it get the path more reliably -Tuna
-
+usedOS = platform.system()
 
 
 # Load image and convert to grayscale for height
@@ -146,7 +147,8 @@ with open('pixels.csv', 'w', newline='') as csvfile:
 # Plot colored pixels as a heatmap
 plt.imshow(darkness_pixels)
 
-script_path = ".lune\gen.luau"
+script_path = ".lune"
+
 input_json = "pixels.json"
 
 # Join the current directory with the relative paths
@@ -154,9 +156,18 @@ script_path = os.path.join(current_dir, script_path)
 input_json = os.path.join(current_dir, input_json)
 
 # Run Powershell commands to start lune mapGeneration program
-subprocess.run([
-    current_dir + "\\.lune\\lune.exe",
-    script_path,
-    input_json,
-    current_dir + "\\.lune\\generatedMaps\\MapGeneration.rbxl",
-])
+
+if usedOS == "Windows":
+    subprocess.run([
+        current_dir + "\\.lune\\lune.exe",
+        script_path + "\gen.lua",
+        input_json,
+        current_dir + "\\.lune\\generatedMaps\\MapGeneration.rbxl",
+    ])
+else:
+    subprocess.run([
+        current_dir + "/.lune/lune",
+        script_path + "/gen.lua",
+        input_json,
+        current_dir + "/.lune/generatedMaps/MapGeneration.rbxl",
+    ])
