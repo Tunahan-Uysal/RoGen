@@ -43,7 +43,7 @@ TÜRKÇE REHBER:
 ## Sabit Python Sürümü Yükleme
 
 1. Python [İndirmeler](https://www.python.org/downloads/) Sayfasından en son Python3 yükleyicisini indirin ve yükleyin.
-2. Kurulum sırasında, Python'u PATH'e ekleyen kutuyu işaretlediğinizden emin olun. ["Python 3.X'i YOL'a Ekle"](https://github.com/PackeTsar/Install-Python#windows-) gibi bir etikete sahip olmalıdır. 
+2. Kurulum sırasında, Python'u PATH'a ekleyen kutuyu işaretlediğinizden emin olun. ["Python 3.X'i PATH'a Ekle"](https://github.com/PackeTsar/Install-Python#windows-) gibi bir etikete sahip olmalıdır. 
 3. Python kurulduktan sonra, bir komut penceresi açabilmeli, **python** yazıp ENTER tuşuna basabilmeli ve bir Python komut isteminin açıldığını görebilmelisiniz. Çıkmak için **quit()** yazın. Ayrıca **pip** komutunu çalıştırabilmeli ve seçeneklerini görebilmelisiniz.
 4. Bunların ikisi de çalışırsa, Rogen kullanmaya hazırsınız demektir İlk önce gereken eklentileri yüklemeniz gerekir Yüklemeniz için, **install.bat**'ı çalıştırmanız yeterlidir..
 
