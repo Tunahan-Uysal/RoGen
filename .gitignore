@@ -1,48 +1,59 @@
-```gitignore
+```
+# Dependencies
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.conda/
+.egg-info/
+.eggs/
+dist-packages/
+site-packages/
+
+# Build artifacts
+build/
+dist/
+*.egg
+*.whl
+*.so
+*.dylib
+*.dll
+*.exe
+
 # Logs and temp files
 *.log
 *.tmp
+*.temp
+*.swp
+*.swo
+*~
 
-# Environment
+# Environment files
 .env
 .env.local
-*.env.*
+.env.*
+.env~*
+.envrc
 
 # Editors
 .vscode/
 .idea/
-
-# Dependencies
-node_modules/
-venv/
-.venv/
-__pycache__/
-.mypy_cache/
-.pytest_cache/
-dist/
-build/
-target/
-.gradle/
-
-# Compiled files
-*.pyc
-*.class
-*.o
-*.exe
-*.dll
-*.so
-*.a
-*.obj
-*.out
-
-# System files
+*.sublime-project
+*.sublime-workspace
 .DS_Store
 Thumbs.db
 
-# Coverage
+# Coverage and testing
+.coverage
 coverage/
 htmlcov/
-.coverage
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
 
 # Compressed files
 *.zip
@@ -63,4 +74,8 @@ htmlcov/
 *.Z
 *.lz
 *.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
