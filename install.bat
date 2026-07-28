@@ -1,3 +1,4 @@
 @echo off
-py -m pip install -r "%CD%\requirements.txt" 
+cd /d "%~dp0"
+py -m pip install -r "requirements.txt" 
 pause
