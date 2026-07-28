@@ -18,19 +18,25 @@ ENGLISH GUIDE:
 
 After install, you can now run **`start.bat`**, where you can adjust the configurations using a gui, and begin the generation.
 
+**EASIEST WAY**: Just double-click **`run.bat`** - it will automatically check for Python, install dependencies if needed, and launch the program!
+
 ### Recommended Version of Python
 
 My current version for Python is **3.11.4**, using that should guarantee that your program will work.
 
 ### Issues people may have
 
-If you have issues with the install, check if the folder is in `'OneDrive'`. If it is, place it elsewhere
+**DOUBLE-CLICK `run.bat` INSTEAD!** - This new script handles everything automatically: checks for Python, installs dependencies if missing, and launches the program.
 
-If you haven't unarchived it yet, then unarchive it now, as it will prevent it from working correctly
+If you still have issues with the install, check if the folder is in `'OneDrive'`. If it is, place it elsewhere.
 
-If you did not check the `'Add to PATH'` option, the program may not work correctly as it will not be able to call Python
+If you haven't unarchived it yet, then unarchive it now, as it will prevent it from working correctly.
+
+If you did not check the `'Add to PATH'` option, the program may not work correctly as it will not be able to call Python.
 
 If you can not check the `'Add to PATH'` option, you may be using a newer version of Python.
+
+**IMPORTANT**: When double-clicking `install.bat` or `start.bat`, make sure you are in the RoGen folder, not System32! The scripts now handle this automatically, but if you're running commands manually, navigate to the RoGen folder first.
 
 ### Where are my maps Exported to?
 

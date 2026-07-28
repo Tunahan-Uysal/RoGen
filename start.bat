@@ -1,2 +1,4 @@
 @echo off
-py "%CD%\main\gui.py" 
+cd /d "%~dp0"
+py "main\gui.py"
+pause
