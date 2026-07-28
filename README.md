@@ -9,48 +9,128 @@ Create large colorful and expanseful worlds with ease and speed using **RoGen**
 
 ENGLISH GUIDE:
 
-## Installing a Stable Python Version
+## Quick Start (EASIEST METHOD!)
 
-1. Download and install the latest Python3 installer from the Python [Downloads](https://www.python.org/downloads/) Page.
-2. During installation, make sure to check the box that adds Python to PATH. It should be labeled something like ["Add Python 3.X to PATH"](https://github.com/PackeTsar/Install-Python#windows-)
-3. Once Python is installed, you should be able to open a command window, type **`python`**, hit ENTER, and see a Python prompt opened. Type **`quit()`** to exit it. You should also be able to run the command **`pip`** and see its options.
-4. If both of these work, then you are ready to go and use RoGen, but first, you must install the extensions required. To do so, you can simply just run **`install.bat`**
+**Just double-click `run.bat`** - it will automatically:
+- Check if Python is installed
+- Verify Python version compatibility
+- Install dependencies if needed
+- Launch the program!
 
-After install, you can now run **`start.bat`**, where you can adjust the configurations using a gui, and begin the generation.
+## Installing Python
 
-**EASIEST WAY**: Just double-click **`run.bat`** - it will automatically check for Python, install dependencies if needed, and launch the program!
+### Recommended Python Version
 
-### Recommended Version of Python
+**Python 3.11 is highly recommended** for best compatibility with RoGen.
 
-My current version for Python is **3.11.4**, using that should guarantee that your program will work.
+Supported versions: Python 3.9, 3.10, 3.11, or 3.12
 
-### Issues people may have
+**Avoid Python 3.13+** as it may have compatibility issues with some dependencies.
 
-**DOUBLE-CLICK `run.bat` INSTEAD!** - This new script handles everything automatically: checks for Python, installs dependencies if missing, and launches the program.
+### Installation Steps
 
-If you still have issues with the install, check if the folder is in `'OneDrive'`. If it is, place it elsewhere.
+1. Download Python 3.11 from https://www.python.org/downloads/
+2. During installation, **CHECK THE BOX** that says "Add Python to PATH" (very important!)
+3. Once installed, run `run.bat` to launch RoGen
 
-If you haven't unarchived it yet, then unarchive it now, as it will prevent it from working correctly.
+## Manual Installation (if needed)
 
-If you did not check the `'Add to PATH'` option, the program may not work correctly as it will not be able to call Python.
+If you prefer manual control or `run.bat` doesn't work:
 
-If you can not check the `'Add to PATH'` option, you may be using a newer version of Python.
+1. Install Python 3.11 from https://www.python.org/downloads/
+2. Make sure to check "Add Python to PATH" during installation
+3. Run `install.bat` to install dependencies
+4. Run `start.bat` to launch the program
 
-**IMPORTANT**: When double-clicking `install.bat` or `start.bat`, make sure you are in the RoGen folder, not System32! The scripts now handle this automatically, but if you're running commands manually, navigate to the RoGen folder first.
+## Troubleshooting
 
-### Where are my maps Exported to?
+### Common Issues and Solutions
 
-it should be in `~/RoGen/main/.lune/generatedMaps`
+**Problem: "Python is not installed or not found"**
+- Solution: Install Python from https://www.python.org/downloads/
+- Make sure to check "Add Python to PATH" during installation
+
+**Problem: Installation fails with NumPy errors**
+- Solution: You're likely using Python 3.13 which isn't fully supported yet
+- Download and install Python 3.11 from https://www.python.org/downloads/
+- Uninstall your current Python version first if needed
+
+**Problem: "Can't find requirements.txt" or System32 errors**
+- Solution: Use `run.bat` instead of manually running commands
+- The batch files now automatically navigate to the correct folder
+
+**Problem: Folder is in OneDrive**
+- Solution: Move the RoGen folder outside of OneDrive to prevent sync issues
+
+**Problem: Program won't start**
+- Solution: Make sure the folder is extracted/unarchived (not still in a ZIP file)
+- Try running `install.bat` first, then `start.bat`
+
+### Where are my maps exported to?
+
+Maps are exported to: `~/RoGen/main/.lune/generatedMaps`
 
 ---
 
 TÜRKÇE REHBER: 
 
-## Sabit Python Sürümü Yükleme
+## Hızlı Başlangıç (EN KOLAY YÖNTEM!)
 
-1. Python [İndirmeler](https://www.python.org/downloads/) Sayfasından en son Python3 yükleyicisini indirin ve yükleyin.
-2. Kurulum sırasında, Python'u PATH'a ekleyen kutuyu işaretlediğinizden emin olun. ["Python 3.X'i PATH'a Ekle"](https://github.com/PackeTsar/Install-Python#windows-) gibi bir etikete sahip olmalıdır. 
-3. Python kurulduktan sonra, bir komut penceresi açabilmeli, **python** yazıp ENTER tuşuna basabilmeli ve bir Python komut isteminin açıldığını görebilmelisiniz. Çıkmak için **quit()** yazın. Ayrıca **pip** komutunu çalıştırabilmeli ve seçeneklerini görebilmelisiniz.
-4. Bunların ikisi de çalışırsa, Rogen kullanmaya hazırsınız demektir İlk önce gereken eklentileri yüklemeniz gerekir Yüklemeniz için, **install.bat**'ı çalıştırmanız yeterlidir..
+**Sadece `run.bat` dosyasına çift tıklayın** - otomatik olarak:
+- Python'un kurulu olup olmadığını kontrol eder
+- Python sürümü uyumluluğunu doğrular
+- Gerekirse bağımlılıkları yükler
+- Programı başlatır!
 
-Yüklendikten sonra, **start.bat**'ı başlatıp, yapılması gereken ayarlardan sonra kullanmaya başlayabilirsiniz.
+## Python Kurulumu
+
+### Önerilen Python Sürümü
+
+**Python 3.11**, RoGen ile en iyi uyumluluk için şiddetle tavsiye edilir.
+
+Desteklenen sürümler: Python 3.9, 3.10, 3.11 veya 3.12
+
+**Python 3.13+ kullanmaktan kaçının** çünkü bazı bağımlılıklarla uyumluluk sorunları olabilir.
+
+### Kurulum Adımları
+
+1. Python 3.11'i https://www.python.org/downloads/ adresinden indirin
+2. Kurulum sırasında "Add Python to PATH" kutusunu **İŞARETLEYİN** (çok önemli!)
+3. Kurulduktan sonra RoGen'i başlatmak için `run.bat` dosyasını çalıştırın
+
+## Manuel Kurulum (gerekirse)
+
+Elle kontrol tercih ediyorsanız veya `run.bat` çalışmazsa:
+
+1. Python 3.11'i https://www.python.org/downloads/ adresinden yükleyin
+2. Kurulum sırasında "Add Python to PATH" seçeneğini işaretlediğinizden emin olun
+3. Bağımlılıkları yüklemek için `install.bat` dosyasını çalıştırın
+4. Programı başlatmak için `start.bat` dosyasını çalıştırın
+
+## Sorun Giderme
+
+### Yaygın Sorunlar ve Çözümleri
+
+**Sorun: "Python yüklü değil veya bulunamadı"**
+- Çözüm: Python'u https://www.python.org/downloads/ adresinden yükleyin
+- Kurulum sırasında "Add Python to PATH" seçeneğini işaretlediğinizden emin olun
+
+**Sorun: NumPy hatalarıyla kurulum başarısız oluyor**
+- Çözüm: Muhtemelen henüz tam desteklenmeyen Python 3.13 kullanıyorsunuz
+- https://www.python.org/downloads/ adresinden Python 3.11 indirip kurun
+- Gerekirse mevcut Python sürümünüzü önce kaldırın
+
+**Sorun: "requirements.txt bulunamıyor" veya System32 hataları**
+- Çözüm: Komutları manuel çalıştırmak yerine `run.bat` kullanın
+- Batch dosyaları artık doğru klasöre otomatik olarak gider
+
+**Sorun: Klasör OneDrive'da**
+- Çözüm: Senkronizasyon sorunlarını önlemek için RoGen klasörünü OneDrive dışına taşıyın
+
+**Sorun: Program başlamıyor**
+- Çözüm: Klasörün çıkarılmış/archivden çıkmış olduğundan emin olun (hala ZIP dosyasında değil)
+- Önce `install.bat`, ardından `start.bat` dosyasını çalıştırmayı deneyin
+
+### Haritalarım nereye aktarılıyor?
+
+Haritalar şuraya aktarılır: `~/RoGen/main/.lune/generatedMaps`
